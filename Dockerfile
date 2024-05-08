@@ -10,8 +10,8 @@ COPY package*.json ./
 # Install all dependencies for both server and client
 RUN npm install
 
-# Copy server and client source
-COPY public ./public/
+#Copy all files and directories
+COPY . .
 
 # Build the client application
 RUN npm run build
