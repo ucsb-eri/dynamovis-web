@@ -12,7 +12,7 @@ RUN npm install
 
 # Copy server and client source
 COPY server ./server
-COPY client ./client
+#COPY client ./client
 
 # Build the client application
 RUN npm run build
