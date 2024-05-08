@@ -11,9 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy server and client source
-#COPY server ./server
-#COPY client ./client
-COPY . .
+COPY public ./public/
 
 # Build the client application
 RUN npm run build
