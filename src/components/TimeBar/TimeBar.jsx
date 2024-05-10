@@ -87,13 +87,13 @@ const TimeBar = (props) => {
 
         <div className={styles.buttons}>
             {!props.playing && <div className={styles.btn} onClick={() => props.setPlaying(true)}>
-                <FontAwesomeIcon className={styles.playIcon} icon={faPlay} />
+                <FontAwesomeIcon className={styles.playIcon} icon={faPlay} size ="2xl"/>
             </div>}
             {props.playing && <div className={styles.btn} onClick={props.pause}>
-                <FontAwesomeIcon className={styles.playIcon} icon={faPause} />
+                <FontAwesomeIcon className={styles.playIcon} icon={faPause} size ="2xl"/>
             </div>}
             <div className={styles.btn} onClick={props.stop}>
-                <FontAwesomeIcon className={styles.playIcon} icon={faStop} />
+                <FontAwesomeIcon className={styles.playIcon} icon={faStop} size ="2xl"/>
             </div>
         </div>
 
