@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Tutorial from "./components/NavItems/Tutorial";
 import './App.css';
 import { BrowserRouter as Router, Switch, Routes, Route, Link, useParams } from "react-router-dom";
 import Map from './components/Map/Map';
@@ -38,6 +39,7 @@ function App() {
         <Route exact path="/:dataset/:str" element={<Home />} />
         <Route exact path="/" element={<Home />} />
         <Route exact path="/Team" element={<Team />} />
+        <Route exact path="/Tutorial" element={<Tutorial />} />
         <Route exact path="/Sponsor" element={<Sponsor />} />
       </Routes>
     </Router>
