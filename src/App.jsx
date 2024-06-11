@@ -16,6 +16,7 @@ import Header from './components/Landing/Header.js'; // Add this import statemen
 import Panel2 from './components/LateralPanel/Panel2';
 import IdSelect from './components/FileLoader/IdSelect';
 import Team from './components/NavItems/Team.jsx';
+import Sponsor from './components/NavItems/Sponsor';
 
 
 const WindowWrapper = styled.div`
@@ -37,6 +38,7 @@ function App() {
         <Route exact path="/:dataset/:str" element={<Home />} />
         <Route exact path="/" element={<Home />} />
         <Route exact path="/Team" element={<Team />} />
+        <Route exact path="/Sponsor" element={<Sponsor />} />
       </Routes>
     </Router>
   );

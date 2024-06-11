@@ -15,11 +15,11 @@ const Team = (props) => {
             <div id={styles.Landing}>
                 <Header/>
                 <div id= "banner" class="mb-50"> 
-                    <Container>
+                    <Container  className = "d-flex align-items-center justify-content-center" >
                       <Row>
                         <Col>
-                          <Card style={{ width: '15rem' }}>
-                            <Card.Img variant = "top" src={img1} title="Image"/>
+                          <Card style={{ width: '15rem'}}>
+                             <Card.Img variant = "top" src={img1} title="Image"/>
                             <Card.Body>
                                 <Card.Title>Cailean Fernandes</Card.Title>  
                                 <Card.Text>UI/UX & Software Developer</Card.Text>
@@ -28,7 +28,7 @@ const Team = (props) => {
                           </Card>
                         </Col>
                         <Col>
-                        <Card style={{ width: '15rem' }}>
+                        <Card style={{ width: '15rem', }}>
                             <Card.Img variant = "top" src={img2}/>
                             <Card.Body>
                                 <Card.Title>Vinny Kanigercherla</Card.Title>  
@@ -48,6 +48,8 @@ const Team = (props) => {
                           </Card>
                         </Col>  
                       </Row>
+                    </Container>
+                    <Container style={{height:'10rem'}}>
                     </Container>
                 </div>
             </div>

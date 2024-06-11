@@ -40,16 +40,16 @@ const Header = () => {
     // Make NavBar Still
     <Nav className="sticky top-0 z-50">
       <div class="col-1">
-      <div id= "logo">
+      <a id= "logo" href="https://move.geog.ucsb.edu/">
           <img src={smallLogo} id= "bannerlogo" class="mt-7 ml-5 scale-150" alt="Landing Page"/>
-      </div>
+      </a>
       </div>
     
       <Link to={"/"}><NavItem>Home</NavItem></Link>
       <Link to={"/Tutorial"}><NavItem>Tutorial</NavItem></Link>
       <Link to={"/Sponsor"}><NavItem> Sponsor</NavItem></Link>
       <Link to={"/Team"}><NavItem>Team</NavItem></Link>
-      <Link to={"/Contact"}><NavItemRight>Contact</NavItemRight></Link>
+     
     </Nav>
 
 

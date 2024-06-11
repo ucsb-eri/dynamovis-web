@@ -55,28 +55,34 @@ const Landing = (props) => {
                       identify environmental drivers of movement.
                     </h2>
                   </div>
-                    <FileLoader
-                      setIdTagName={props.setIdTagName}
-                      setIdTimeRanges={props.setIdTimeRanges}
-                      setIds={props.setIds}
-                      setColors={props.setColors}
-                      setShowIds={props.setShowIds}
-                      dataset={props.dataset}
-                      setDisplayingIds={props.setDisplayingIds}
-                      setTagsMatrix={props.setTagsMatrix}
-                      setTagForLineColor={props.setTagForLineColor}
-                      tagForLineColorIndex={props.tagForLineColorIndex}
-                      localCenters={props.localCenters}
-                      setLocalCenters={props.setLocalCenters}
-                      setZoom={props.setZoom}
-                      setCenter={props.setCenter}
-                      setData={props.setData}
-                      setLatTag={props.setLatTag}
-                      setLongTag={props.setLongTag}
-                      setPolylines={props.setPolylines}
-                      setInitialTime={props.setInitialTime}
-                      setEndingTime={props.setEndingTime}
-                    />
+                  <FileLoader
+                    setIdTagName={props.setIdTagName}
+                    setIdTimeRanges={props.setIdTimeRanges}
+                    setIds={props.setIds}
+                    setColors={props.setColors}
+                    setShowIds={props.setShowIds}
+                    dataset={props.dataset}
+                    setDisplayingIds={props.setDisplayingIds}
+                    setTagsMatrix={props.setTagsMatrix}
+                    setTagForLineColor={props.setTagForLineColor}
+                    tagForLineColorIndex={props.tagForLineColorIndex}
+                    localCenters={props.localCenters}
+                    setLocalCenters={props.setLocalCenters}
+                    setZoom={props.setZoom}
+                    setCenter={props.setCenter}
+                    setData={props.setData}
+                    setLatTag={props.setLatTag}
+                    setLongTag={props.setLongTag}
+                    setPolylines={props.setPolylines}
+                    setInitialTime={props.setInitialTime}
+                    setEndingTime={props.setEndingTime}
+                  />
+                  <Space />
+                  <h3>
+                   -DynamoVis Desktop version is available for download via our linked <a styles={{textDecoration: 'underline'}}href="https://github.com/move-ucsb/DynamoVis">
+                      Github
+                    </a>
+                  </h3>
                 </Col>
                 <Col>
                   <div className={styles.videoContainer}>
