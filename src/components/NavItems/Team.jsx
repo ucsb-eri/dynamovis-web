@@ -4,6 +4,7 @@ import styles from "./Team.module.css";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import Card from "react-bootstrap/esm/Card";
+import img0 from "../../assets/team_images/Somayeh.png"
 import img1 from "../../assets/team_images/Cailean.jpg"; 
 import img2 from "../../assets/team_images/Vinny.jpg"; 
 import img3 from "../../assets/team_images/Neil.jpg"; 
@@ -17,6 +18,15 @@ const Team = (props) => {
                 <div id= "banner" class="mb-50"> 
                     <Container  className = "d-flex align-items-center justify-content-center" >
                       <Row>
+                        <Col>
+                        <Card style = {{width: '15rem'}}>
+                            <Card.Img variant = "top" src={img0} title="Image" />
+                            <Card.Body>
+                                <Card.Title> Somayeh Dodge </Card.Title> 
+                                <Card.Text>Principal Investigator</Card.Text>
+                            </Card.Body>
+                        </Card>
+                        </Col>
                         <Col>
                           <Card style={{ width: '15rem'}}>
                              <Card.Img variant = "top" src={img1} title="Image"/>
