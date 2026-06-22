@@ -300,7 +300,7 @@ const FileLoader = (props) => {
                     )
                 })}
             </div> */}  
-            <input id="file-upload" className={styles.hide} type="file" onChange={(e) => changeFile(e)}></input>
+            <input id="file-upload-default" className={styles.hide} type="file" onChange={(e) => changeFile(e)}></input>
 
         </div>
     )
