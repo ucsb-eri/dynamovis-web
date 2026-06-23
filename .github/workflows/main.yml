@@ -19,22 +19,23 @@ jobs:
       with:
         fetch-depth: 0 # Fetches all history for all branches and tags
 
+    # The runner's global npm config points the cache at /opt/npm-cache, which
+    # the runner user can't create/write. Override it to a runner-owned, writable
+    # path so `npm ci` doesn't hit EACCES. Set via GITHUB_ENV so it applies to
+    # all later steps (setup-node, npm ci, build). $RUNNER_TEMP is runner-owned.
+    - name: Configure npm cache directory
+      run: echo "npm_config_cache=$RUNNER_TEMP/.npm" >> "$GITHUB_ENV"
+
     # Step to set up a specific version of Node.js
+    # `cache: npm` caches npm's cache dir (npm_config_cache above), keyed on
+    # package-lock.json. Do NOT cache node_modules: `npm ci` wipes and reinstalls
+    # it every run, and restoring a stale copy onto the persistent self-hosted
+    # runner corrupts npm's cache.
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '26' # Specifies the Node.js version to use
-
-    # Step to cache the installed Node.js modules to speed up future runs
-    - name: Cache Node.js modules
-      uses: actions/cache@v4
-      with:
-        path: |
-          ~/.npm
-          **/node_modules
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}-v2
-        restore-keys: |
-          ${{ runner.os }}-node-
+        cache: 'npm'
 
     # Step to install project dependencies using npm ci for a clean install
     - name: Install Dependencies
